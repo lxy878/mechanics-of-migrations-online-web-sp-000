@@ -6,11 +6,6 @@ class CreateArtists < ActiveRecord::Migration[5.2]
   end
 
   def change
-    create_table :artists do |t|
-      t.string :name
-      t.string :genre
-      t.integer :age
-      t.string :hometown
-    end
+    add_column :artists, :favorite_food, :string
   end
 end
